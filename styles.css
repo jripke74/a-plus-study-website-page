@@ -6,9 +6,33 @@
   padding: 0;
 }
 
+body {
+  margin: 40px;
+}
+
 h1, h2, h3 {
   text-align: center;
-  margin: 20px;
+  margin: 15px;
+}
+
+table {
+  margin: 0 auto;
+}
+
+table caption {
+  margin-bottom: 10px;
+}
+
+table thead {
+  text-align: left;
+}
+
+table tbody td {
+  padding-right: 10px;
+}
+
+ol {
+  margin-left: 20px;
 }
 
 ul {
