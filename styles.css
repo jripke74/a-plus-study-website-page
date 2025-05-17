@@ -15,6 +15,10 @@ h1, h2, h3 {
   margin: 15px;
 }
 
+h3 {
+  font-weight: 400;
+}
+
 table {
   margin: 0 auto;
 }
