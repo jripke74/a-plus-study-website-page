@@ -15,7 +15,8 @@
     <heading>
       <a href="./index.html">Back Home</a>
       <a href="./networking-2.html">2.0</a>
-      <h1>2.1 Networking</h1>
+      <h1>2 Networking</h1>
+      <h2>2.1 Introduction to IP</h2>
     </heading>
     <main>
       <h3>A series of moving vans</h3>
@@ -48,6 +49,104 @@
           Inside the boxes are more things
           <ul>
             <li>Application information</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>TCP and UDP</h3>
+      <ul>
+        <li>Transported inside of IP
+          <ul>
+            <li>Encapsulated by the IP protocol</li>
+          </ul>
+        </li>
+        <li>Two ways to move data from place to place
+          <ul>
+            <li>Different featrues for different applications</li>
+          </ul>
+        </li>
+        <li>OSI Layer 4
+          <ul>
+            <li>The transport layer</li>
+          </ul>
+        </li>
+        <li>Multiplexing 
+          <ul>
+            <li>Use many different applications at the same time</li>
+            <li>TCP and UDP</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>TCP - Transmission Control Protocol Communication
+          <br>
+          TCP - Transmission Control Protocol 20250529</h3>
+        <ul>
+          <li>Connection-oriented
+            <ul>
+              <li>A formal connection setup and close</li>
+            </ul>
+          </li>
+          <li>"Reliable" delivery
+            <ul>
+              <li>Revovery from errors</li>
+              <li>Manages out-of-order messages or retransmissions</li>
+            </ul>
+          </li>
+          <li>Flow control
+            <ul>
+              <li>The receiver can manage how data is sent</li>
+            </ul>
+          </li>
+        </ul>
+      <h3>UDP - User Datagram Protocol Communication
+        <br>
+        UDP - User Datagram Protocol 20250529
+      </h3>
+      <ul>
+        <li>Connections - No formal open/close to the connection</li>
+        <li>"Unreliable" delivery
+          <ul>
+            <li>No error recovery no reordering of data or retransmissions</li>
+          </ul>
+        </li>
+        <li>No flow control
+          <ul>
+            <li>Sender determines the amount of data transmitted</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Why would you ever use UDP? 20250529</h3>
+      <ul>
+        <li>Real-time communication
+          <ul>
+            <li>There's no way to stop and resend the data</li>
+            <li>Time doesn't stop for your network</li>
+          </ul>
+        </li>
+        <li>Connectionless protocols
+          <ul>
+            <li>DHCP (Dynamic Host Configuration Protocol)</li>
+            <li>TFTP (Trivial File Transfer Protocol)</li>
+          </ul>
+        </li>
+        <li>The data might not get through
+          <ul>
+            <li>The application keeps track and decides what to do</li>
+            <li>It might not do anything</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Communication using TCP 20250529</h3>
+      <ul>
+        <li>Connection-oriented protocols prefer a "return receipt"
+          <ul>
+            <li>HTTPS (Hypertext Transfer Protocol Secure)</li>
+            <li>SSH (Secure Shell)</li>
+          </ul>
+        </li>
+        <li>The application doesn't worry about out of order frames or missing data
+          <ul>
+            <li>TCP handles all of the communication overhead</li>
+            <li>The application has one job</li>
           </ul>
         </li>
       </ul>
