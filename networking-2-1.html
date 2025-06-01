@@ -16,7 +16,7 @@
       <a href="./index.html">Back Home</a>
       <a href="./networking-2.html">2.0</a>
       <h1>2 Networking</h1>
-      <h2>2.1 Introduction to IP</h2>
+      <h2>2.1 Introduction to IP and Common Ports</h2>
     </heading>
     <main>
       <h3>A series of moving vans</h3>
@@ -54,61 +54,73 @@
       </ul>
       <h3>TCP and UDP</h3>
       <ul>
-        <li>Transported inside of IP
+        <li>
+          Transported inside of IP
           <ul>
             <li>Encapsulated by the IP protocol</li>
           </ul>
         </li>
-        <li>Two ways to move data from place to place
+        <li>
+          Two ways to move data from place to place
           <ul>
             <li>Different featrues for different applications</li>
           </ul>
         </li>
-        <li>OSI Layer 4
+        <li>
+          OSI Layer 4
           <ul>
             <li>The transport layer</li>
           </ul>
         </li>
-        <li>Multiplexing 
+        <li>
+          Multiplexing
           <ul>
             <li>Use many different applications at the same time</li>
             <li>TCP and UDP</li>
           </ul>
         </li>
       </ul>
-      <h3>TCP - Transmission Control Protocol Communication
-          <br>
-          TCP - Transmission Control Protocol 20250529</h3>
-        <ul>
-          <li>Connection-oriented
-            <ul>
-              <li>A formal connection setup and close</li>
-            </ul>
-          </li>
-          <li>"Reliable" delivery
-            <ul>
-              <li>Revovery from errors</li>
-              <li>Manages out-of-order messages or retransmissions</li>
-            </ul>
-          </li>
-          <li>Flow control
-            <ul>
-              <li>The receiver can manage how data is sent</li>
-            </ul>
-          </li>
-        </ul>
-      <h3>UDP - User Datagram Protocol Communication
-        <br>
+      <h3>
+        TCP - Transmission Control Protocol Communication
+        <br />
+        TCP - Transmission Control Protocol 20250529
+      </h3>
+      <ul>
+        <li>
+          Connection-oriented
+          <ul>
+            <li>A formal connection setup and close</li>
+          </ul>
+        </li>
+        <li>
+          "Reliable" delivery
+          <ul>
+            <li>Revovery from errors</li>
+            <li>Manages out-of-order messages or retransmissions</li>
+          </ul>
+        </li>
+        <li>
+          Flow control
+          <ul>
+            <li>The receiver can manage how data is sent</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>
+        UDP - User Datagram Protocol Communication
+        <br />
         UDP - User Datagram Protocol 20250529
       </h3>
       <ul>
         <li>Connections - No formal open/close to the connection</li>
-        <li>"Unreliable" delivery
+        <li>
+          "Unreliable" delivery
           <ul>
             <li>No error recovery no reordering of data or retransmissions</li>
           </ul>
         </li>
-        <li>No flow control
+        <li>
+          No flow control
           <ul>
             <li>Sender determines the amount of data transmitted</li>
           </ul>
@@ -116,19 +128,22 @@
       </ul>
       <h3>Why would you ever use UDP? 20250529</h3>
       <ul>
-        <li>Real-time communication
+        <li>
+          Real-time communication
           <ul>
             <li>There's no way to stop and resend the data</li>
             <li>Time doesn't stop for your network</li>
           </ul>
         </li>
-        <li>Connectionless protocols
+        <li>
+          Connectionless protocols
           <ul>
             <li>DHCP (Dynamic Host Configuration Protocol)</li>
             <li>TFTP (Trivial File Transfer Protocol)</li>
           </ul>
         </li>
-        <li>The data might not get through
+        <li>
+          The data might not get through
           <ul>
             <li>The application keeps track and decides what to do</li>
             <li>It might not do anything</li>
@@ -137,17 +152,106 @@
       </ul>
       <h3>Communication using TCP 20250529</h3>
       <ul>
-        <li>Connection-oriented protocols prefer a "return receipt"
+        <li>
+          Connection-oriented protocols prefer a "return receipt"
           <ul>
             <li>HTTPS (Hypertext Transfer Protocol Secure)</li>
             <li>SSH (Secure Shell)</li>
           </ul>
         </li>
-        <li>The application doesn't worry about out of order frames or missing data
+        <li>
+          The application doesn't worry about out of order frames or missing
+          data
           <ul>
             <li>TCP handles all of the communication overhead</li>
             <li>The application has one job</li>
           </ul>
+        </li>
+      </ul>
+      <h3>Speedy delivery 20250529</h3>
+      <ul>
+        <li>
+          The IP delivery truck delivers from one (IP) address to another (IP)
+          address
+          <ul>
+            <li>
+              Every house has an address, every computer has an IP address
+            </li>
+          </ul>
+        </li>
+        <li>
+          Boxes arrive at the house / IP address
+          <ul>
+            <li>Where do the boxes go? - Each box has a room name</li>
+          </ul>
+        </li>
+        <li>
+          Port is written on the outside of the box
+          <ul>
+            <li>Drop the box into the right room</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Lots of ports</h3>
+      <ul>
+        <li>
+          IPv4 sockets
+          <ul>
+            <li>Server Ip address, protocol, server application port #</li>
+            <li>Client IP address, protocol, client port numbers</li>
+          </ul>
+        </li>
+        <li>
+          Non-ephemeral ports - permanent port numbers
+          <ul>
+            <li>Ports 0 through 1,023 - Usually on a server or service</li>
+          </ul>
+        </li>
+        <li>
+          Ephemeral ports - temporary port numbers
+          <ul>
+            <li>Ports 1,024 through 65,535</li>
+            <li>Determined in real-time by the client</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Port Numbers 20250529</h3>
+      <ul>
+        <li>TCP and UDP ports can be any number between 0 and 65,535</li>
+        <li>
+          Most servers (services) use non-ephemeral (not-temporary) port numbers
+          <ul>
+            <li>This isn't always the case - it's just a number</li>
+          </ul>
+        </li>
+        <li>Port numbers are for communication, not security</li>
+        <li>Service port numbers need to be "well known"</li>
+        <li>TCP port numbers aren't the same as UDP port numbers</li>
+      </ul>
+      <h2>Common Ports</h2>
+      <h3>Port numbers</h3>
+      <ul>
+        <li>
+          Well-known port number
+          <ul>
+            <li>Client and server need to match</li>
+          </ul>
+        </li>
+        <li>
+          Important for firewall rules
+          <ul>
+            <li>Port-based security</li>
+          </ul>
+        </li>
+        <li>
+          A bit of rote memorization
+          <ul>
+            <li>Becomes second nature after a while</li>
+          </ul>
+        </li>
+        <li>
+          Make sure you know port numbers, protocol, and how the protocol is
+          used
         </li>
       </ul>
     </main>
