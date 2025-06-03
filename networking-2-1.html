@@ -256,12 +256,14 @@
       </ul>
       <h3>FTP - File Transfer Protocol</h3>
       <ul>
-        <li>tcp/20 (active mode data), tcp/21 (control)
+        <li>
+          tcp/20 (active mode data), tcp/21 (control)
           <ul>
             <li>Transfers files between systems</li>
           </ul>
         </li>
-        <li>Authenticates with a username and password
+        <li>
+          Authenticates with a username and password
           <ul>
             <li>Some systems use a generic/anonymous login</li>
           </ul>
@@ -276,12 +278,14 @@
       <h3>Telnet</h3>
       <ul>
         <li>Telnet - Telecommunication Network - tcp/23</li>
-        <li>Login to devices remotely
+        <li>
+          Login to devices remotely
           <ul>
             <li>Console access</li>
           </ul>
         </li>
-        <li>In-the-clear communication
+        <li>
+          In-the-clear communication
           <ul>
             <li>Not the best choice for production systems</li>
           </ul>
@@ -289,20 +293,38 @@
       </ul>
       <h3>SMTP - Simple Mail Transfer Protocol</h3>
       <ul>
-        <li>SMTP - Simple Mail Transfer Protocol
+        <li>
+          SMTP - Simple Mail Transfer Protocol
           <ul>
             <li>Server to server email transfer</li>
             <li>tcp/25</li>
           </ul>
         </li>
-        <li>Also used to send mail from a device to a mail server
+        <li>
+          Also used to send mail from a device to a mail server
           <ul>
             <li>Commonly configured on mobile devices and email clients</li>
           </ul>
         </li>
-        <li>Other protocols are used for clients to receive email
+        <li>
+          Other protocols are used for clients to receive email
           <ul>
             <li>IMAP, POP3</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>DNS - Domain Name System 20250603</h3>
+      <ul>
+        <li>
+          Converts names to IP addresses - udp/53
+          <ul>
+            <li>wwww.professormesser.com = 162.159.246.164</li>
+          </ul>
+        </li>
+        <li>
+          These are very critical resources
+          <ul>
+            <li>Usually multiple DNS servers are in production</li>
           </ul>
         </li>
       </ul>
