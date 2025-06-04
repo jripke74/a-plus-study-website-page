@@ -394,6 +394,36 @@
           </ul>
         </li>
       </ul>
+      <h3>SMB - Server Message Block 20250604</h3>
+      <ul>
+        <li>Protocol used by Microsoft Windows
+          <ul>
+            <li>File sharing, printer sharing</li>
+            <li>Also called CIFS (Common Internet File System)</li>
+          </ul>
+        </li>
+        <li>Using NetBIOS over TCP/IP (Network Basic Input/Output System)
+          <ul>
+            <li>udp/137 - NetBIOS name sercies (nbname)</li>
+            <li>tcp/139 - NetBIOS session service (nbsession)</li>
+          </ul>
+        </li>
+        <li>Direct over tcp/445 (NewBIOS-less)
+          <ul>
+            <li>Direct SMB communication over TCP without the NetBIOS transport</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>LDAP/LADPS</h3>
+      <ul>
+        <li>LDAP (Lightweight Directory Access Protocol)
+          <ul>
+            <li>tcp/389</li>
+            <li>Store and retrieve information in a network direcotory</li>
+            <li>Commonly used in Microsoft Active Directory</li>
+          </ul>
+        </li>
+      </ul>
     </main>
   </body>
 </html>
