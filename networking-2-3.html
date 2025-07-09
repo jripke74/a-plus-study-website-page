@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="a plus certification objective" />
+    <meta property="og:title" content="apluscert.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="url" />
+    <meta property="og:url" content="https://www.apluscert.com" />
+    <title>2.3 Networking</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <heading>
+      <a href="./index.html">Back Home</a>
+      <a href="./networking-2.html">2.0</a>
+      <h1>2 Networking</h1>
+      <h2>2.3 - Network Services</h2>
+    </heading>
+    <main>
+      <h3>DNS server</h3>
+      <ul>
+        <li>
+          Domain Name system
+          <ul>
+            <li>Convert names to IP address</li>
+            <li>And vice versa</li>
+          </ul>
+        </li>
+        <li>
+          Distributed naming system
+          <ul>
+            <li>The load is balanced across many different servers</li>
+          </ul>
+        </li>
+        <li>
+          Usually managed by the ISP or IT department
+          <ul>
+            <li>A critical resource</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>DHCP server</h3>
+      <ul>
+        <li>
+          Dynamic Host Configuration Protocol
+          <ul>
+            <li>Automatic IP address configuration</li>
+          </ul>
+        </li>
+        <li>
+          Very common service
+          <ul>
+            <li>Available on most home routers</li>
+          </ul>
+        </li>
+        <li>
+          Enterprise DHCP will be redundant
+          <ul>
+            <li>Usually running on central servers</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>File share</h3>
+      <ul>
+        <li>
+          Centralized storage of documents, spreadsheets, videos, pictures, and
+          any other files
+          <ul>
+            <li>A fileshare</li>
+          </ul>
+        </li>
+        <li>
+          Standard system of file management
+          <ul>
+            <li>
+              SMB (Server Message Blocks), Apple Filing Protocol (AFP), etc.
+            </li>
+          </ul>
+        </li>
+        <li>
+          The front-end hides the protocol
+          <ul>
+            <li>Copy, delete, rename, etc.</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Print Server</h3>
+      <ul>
+        <li>
+          Connect a printer to the network
+          <ul>
+            <li>Provide printing servies for all network devices</li>
+          </ul>
+        </li>
+        <li>
+          May be software in a computer
+          <ul>
+            <li>Computer is connected to the printer</li>
+          </ul>
+        </li>
+        <li>
+          May be built-in to the printer
+          <ul>
+            <li>Network adapter and software</li>
+          </ul>
+        </li>
+        <li>
+          Uses standard printing protocols
+          <ul>
+            <li>
+              SMB (Server Message Block), IPP (internet Printing Protocol), LPD
+              (Line Printer Protocol)
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Mail server</h3>
+      <ul>
+        <li>
+          Store your incoming mail
+          <ul>
+            <li>Send your outgoing mail</li>
+          </ul>
+        </li>
+        <li>
+          Usually managed by the ISP or the IT department
+          <ul>
+            <li>A complex set of requirements</li>
+          </ul>
+        </li>
+        <li>
+          Usually one of the most important services
+          <ul>
+            <li>24 x 7 support</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Syslog</h3>
+      <ul>
+        <li>
+          Standard for message logging
+          <ul>
+            <li>Diverse systems, consolidated log</li>
+          </ul>
+        </li>
+        <li>
+          Usually a central logging receiver
+          <ul>
+            <li>Integrated into the SIEM</li>
+            <li>Security Information and Event Manager</li>
+          </ul>
+        </li>
+        <li>
+          You're going to need a lot of disk space
+          <ul>
+            <li>No, more. More than that.</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Web server</h3>
+      <ul>
+        <li>
+          Respond to browser requests
+          <ul>
+            <li>Using standard web browsing protocols - HTTP/HTTPS</li>
+            <li>Pages are built with HTML, HTML5</li>
+          </ul>
+        </li>
+        <li>
+          Web page are stored on the server
+          <ul>
+            <li>Downloaded to the browser</li>
+            <li>Static pages are built dynamically in real-time</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Authentication server</h3>
+      <ul>
+        <li>Authentication, Authorization, and Accounting (AAA) server
+          <ul>
+            <li>The login server</li>
+          </ul>
+        </li>
+        <li>
+          Login authentication to resources
+          <ul>
+            <li>Centralized management</li>
+          </ul>
+        </li>
+        <li>
+          Almost always an enterprise service
+          <ul>
+            <li>Not required on a home network</li>
+          </ul>
+        </li>
+        <li>
+          Usually a set of redundant servers
+          <ul>
+            <li>Always Available</li>
+            <li>Extremely important service</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Database servers</h3>
+      <ul>
+        <li>
+          Database table storage
+          <ul>
+            <li>Save information in columns and rows</li>
+            <li>Similar to a spreadsheet</li>
+          </ul>
+        </li>
+        <li>
+          Relational Database
+          <ul>
+            <li>Link tables together</li>
+            <li>These links are relationships</li>
+            <li>Flexible and fast</li>
+          </ul>
+        </li>
+        <li>
+          Structured Query Language (SQL)
+          <ul>
+            <li>Access data using a standard language</li>
+            <li>Microsoft SQL Servers, MySQL, etc.</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>NTP servers</h3>
+      <ul>
+        <li>
+          The time of day is more important than you might think
+          <ul>
+            <li>Network Time Protocol</li>
+            <li>Encryption, logins, backups, log timestamps</li>
+            <li>Encrything needs to work from the same clock</li>
+          </ul>
+        </li>
+        <li>
+          NTP Server
+          <ul>
+            <li>Listens on udp/123</li>
+            <li>Responds to time reuests from NTP clients</li>
+          </ul>
+        </li>
+        <li>
+          NTP client
+          <ul>
+            <li>Requests time updates from NTP clients</li>
+            <li>Daily synchronization is common</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Spam gateways</h3>
+      <ul>
+        <li>
+          Unscolicited messaes
+          <ul>
+            <li>Email, forums, etc</li>
+          </ul>
+        </li>
+        <li>
+          Various content
+          <ul>
+            <li>Commercial advertising</li>
+            <li>Non-commercial proselytizing</li>
+            <li>Phishing attemps</li>
+          </ul>
+        </li>
+        <li>
+          Significant technology issue
+          <ul>
+            <li>
+              Security concerns, resource utilization, storage costs, managing
+              the spam
+            </li>
+          </ul>
+        </li>
+        <li>
+          Unsolicited email
+          <ul>
+            <li>Stop it a the gateway before it reaches the user</li>
+            <li>On-site or cloud-baseds</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>All-in-one security appliance</h3>
+      <ul>
+        <li>
+          Next-generation firewall, Unified Threat Management (UTM) / Web
+          security gateway
+        </li>
+        <li>URL filter / Content inspection</li>
+        <li>Malware inspection</li>
+        <li>Spam filter</li>
+        <li>CSU/DSU</li>
+        <li>Router, Switch</li>
+        <li>Firewall</li>
+        <li>IDS/IPS</li>
+        <li>Bandwidth shaper</li>
+        <li>VPN endpoint</li>
+      </ul>
+      <h3>Load balancers</h3>
+      <ul>
+        <li>
+          Distribute the load
+          <ul>
+            <li>Multiple servers - Invisible to the end-user</li>
+          </ul>
+        </li>
+        <li>
+          Large-scale implementations
+          <ul>
+            <li>Web server farms, database farms</li>
+          </ul>
+        </li>
+        <li>
+          Fault tolerance
+          <ul>
+            <li>Server outages have no effect - Very fast convergence</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Proxy server</h3>
+      <ul>
+        <li>
+          An intermediate server
+          <ul>
+            <li>Client makes the request to the proxy</li>
+            <li>The proxy performs the actual request</li>
+            <li>The proxy provides results back to the client</li>
+          </ul>
+        </li>
+        <li>
+          Useful features
+          <ul>
+            <li>Access control, caching, URL filtering, content scanning</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>SCADA / ICS</h3>
+      <ul>
+        <li>
+          Supervisory Control and Data Acquisition system
+          <ul>
+            <li>Large-scale, multi-site Industrial Control System (ICS)</li>
+          </ul>
+        </li>
+        <li>
+          PC managers equipment
+          <ul>
+            <li>Power generation, refining manufacturing equipment</li>
+            <li>Facilities, Industrial, energy, logistics</li>
+          </ul>
+        </li>
+        <li>
+          Distributed control systems
+          <ul>
+            <li>Real-time information</li>
+            <li>System control</li>
+          </ul>
+        </li>
+        <li>
+          Requires extensive segmentation
+          <ul>
+            <li>No access from the outside</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Legacy and embedded systems</h3>
+      <ul>
+        <li>
+          Lagacy systems
+          <ul>
+            <li>Another expression for "really old"</li>
+            <li>May also be "really important"</li>
+            <li>
+              Learning old things can be just as important as learning the new
+              things
+            </li>
+          </ul>
+        </li>
+        <li>
+          Embedded systems
+          <ul>
+            <li>Purpose-bult device</li>
+            <li>Not usual to have direct access to the operating system</li>
+            <li>Alarm system, door security, time card system</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>IoT (Internet of Things) devices</h3>
+      <ul>
+        <li>
+          Appliances
+          <ul>
+            <li>Refrigerators</li>
+          </ul>
+        </li>
+        <li>
+          Smart devices
+          <ul>
+            <li>Smart speakers respond to voice</li>
+          </ul>
+        </li>
+        <li>
+          Air control
+          <ul>
+            <li>Thermostats, temperature control</li>
+          </ul>
+        </li>
+        <li>
+          Access
+          <ul>
+            <li>Smart doorbells</li>
+          </ul>
+        </li>
+        <li>
+          May require a segmented network
+          <ul>
+            <li>Limit any security breaches</li>
+          </ul>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>

@@ -48,6 +48,9 @@ ul {
   margin-left: 20px;
 }
 
+.important {
+  color: red;
+}
 /* ul > li:first-child {
   font-weight: bold;
 } */

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="a plus certification objective" />
+    <meta property="og:title" content="apluscert.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="url" />
+    <meta property="og:url" content="https://www.apluscert.com" />
+    <title>2.4 DNS Configuration</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <heading>
+      <a href="./index.html">Back Home</a>
+      <a href="./networking-2.html">2.0</a>
+      <h1>2 Networking</h1>
+      <h2>2.4 DNS Configuration</h2>
+    </heading>
+    <main>
+      <h3>Domain Name System</h3>
+      <ul>
+        <li>
+          Translates human-readable names into computer-readable IP addresses
+          <ul>
+            <li>You only need to remember www.professormesser.com</li>
+          </ul>
+        </li>
+        <li>
+          Hierarchical
+          <ul>
+            <li>Follow the path</li>
+          </ul>
+        </li>
+        <li>
+          Distributed database
+          <ul>
+            <li>Many DNS servers</li>
+            <li>13 root server clusters (over 1,000 actual servers)</li>
+            <li>
+              Hundreds of generic top-level domains (gTLDs) - .com, .org, .net,
+              etc.
+            </li>
+            <li>
+              Over 275 country code top-level domains (ccTLDs) - .us, .ca, .uk,
+              etc.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3>The DNS hierarchy</h3>
+      <h3>DNS records</h3>
+      <ul>
+        <li>
+          Resources Records (RR)
+          <ul>
+            <li>The database records of domain name serives</li>
+          </ul>
+        </li>
+        <li>
+          Over 30 record types
+          <ul>
+            <li>IP addresses, certificates, host alias names, etc.</li>
+          </ul>
+        </li>
+        <li>
+          <span class="important"
+            >These are important and critical configurations</span
+          >
+          <ul>
+            <li>Make sure to check your settings, backup, and test!</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>DNS lookup</h3>
+      <h3>Address records (A) (AAAA)</h3>
+      <ul>
+        <li>
+          Defines the IP address of a host
+          <ul>
+            <li>This is the most popular query</li>
+          </ul>
+        </li>
+        <li>
+          A records are for IPv4 addresses
+          <ul>
+            <li>
+              Modify the A record to charge to change the host name to IP
+              address resolution
+            </li>
+          </ul>
+        </li>
+        <li>
+          AAAA records are for IPv6 addresses
+          <ul>
+            <li>The same DNS server, different records</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Canonical name records (CNAME)</h3>
+      <ul>
+        <li>
+          A name is an alias of another, canonical name
+          <ul>
+            <li>One physical server, multiple services</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Mail exchanger record (MX)</h3>
+      <ul>
+        <li>Determining the host name for the mail server - this isn't an IP address; it's a name</li>
+      </ul>
+    </main>
+  </body>
+</html>
