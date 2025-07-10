@@ -1,328 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="a plus certification objective" />
-    <meta property="og:title" content="apluscert.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="url" />
-    <meta property="og:url" content="https://www.apluscert.com" />
-    <title>2.4 DNS Configuration</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <heading>
-      <a href="./index.html">Back Home</a>
-      <a href="./networking-2.html">2.0</a>
-      <h1>2 Networking</h1>
-      <h2>2.4 DNS Configuration</h2>
-    </heading>
-    <main>
-      <h3>Domain Name System</h3>
-      <ul>
-        <li>
-          Translates human-readable names into computer-readable IP addresses
-          <ul>
-            <li>You only need to remember www.professormesser.com</li>
-          </ul>
-        </li>
-        <li>
-          Hierarchical
-          <ul>
-            <li>Follow the path</li>
-          </ul>
-        </li>
-        <li>
-          Distributed database
-          <ul>
-            <li>Many DNS servers</li>
-            <li>13 root server clusters (over 1,000 actual servers)</li>
-            <li>
-              Hundreds of generic top-level domains (gTLDs) - .com, .org, .net,
-              etc.
-            </li>
-            <li>
-              Over 275 country code top-level domains (ccTLDs) - .us, .ca, .uk,
-              etc.
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h3>The DNS hierarchy</h3>
-      <h3>DNS records</h3>
-      <ul>
-        <li>
-          Resources Records (RR)
-          <ul>
-            <li>The database records of domain name serives</li>
-          </ul>
-        </li>
-        <li>
-          Over 30 record types
-          <ul>
-            <li>IP addresses, certificates, host alias names, etc.</li>
-          </ul>
-        </li>
-        <li>
-          <span class="important"
-            >These are important and critical configurations</span
-          >
-          <ul>
-            <li>Make sure to check your settings, backup, and test!</li>
-          </ul>
-        </li>
-      </ul>
-      <h3>DNS lookup</h3>
-      <h3>Address records (A) (AAAA)</h3>
-      <ul>
-        <li>
-          Defines the IP address of a host
-          <ul>
-            <li>This is the most popular query</li>
-          </ul>
-        </li>
-        <li>
-          A records are for IPv4 addresses
-          <ul>
-            <li>
-              Modify the A record to charge to change the host name to IP
-              address resolution
-            </li>
-          </ul>
-        </li>
-        <li>
-          AAAA records are for IPv6 addresses
-          <ul>
-            <li>The same DNS server, different records</li>
-          </ul>
-        </li>
-      </ul>
-      <h3>Canonical name records (CNAME)</h3>
-      <ul>
-        <li>
-          A name is an alias of another, canonical name
-          <ul>
-            <li>One physical server, multiple services</li>
-          </ul>
-        </li>
-      </ul>
-      <h3>Mail exchanger record (MX)</h3>
-      <ul>
-        <li>Determining the host name for the mail server - this isn't an IP address; it's a name</li>
-      </ul>
-      <h3>Text records (TXT)</h3>
-      <ul>
-        <li>Human-readable text information
-          <ul>
-            <li>Useful public information</li>
-            <li>Was originally designed for informal information</li>
-          </ul>
-        </li>
-        <li>Can be used for verification purposes
-          <ul>
-            <li>if you have access to the DNS, then you must be the adminstrator of the domain name</li>
-          </ul>
-        </li>
-        <li>Commonly used for email security
-          <ul>
-            <li>External email servers validate information from your DNS</li>
-          </ul>
-        </li>
-      </ul>
-      <h3>Viewing TXT records with nslookup</h3>
-      <h3>Domain keys identified Mail (DKIM)</h3>
-      <ul>
-        <li>Digital sign a domain's outgoing mail 
-          <ul>
-            <li>Validated by mail servers, not usually seen by the end user</li>
-            <li>The public key is in the DKIM TXT record</li>
-          </ul>
-        </li>
-      </ul>
-      <h3>Sender Policy Framework (SPF)</h3>
-      <ul>
-        <li>SPF protocol
-          <ul>
-            <li>A list of all servers authorized to send emails for this domain</li>
-            <li>Prevent mail spoofing</li>
-            <li>Mail servers perform a check to see if incoming mail really did come from an authorized host</li>
-          </ul>
-        </li>
-      </ul>
-      <h3>DMARC</h3>
-      <ul>
-        <li>Domain-based Message Authentication, Reporting, and Conformance (DMARC)
-          <ul>
-            <li>Prevent unauthorized email use (spoofing)</li>
-            <li>An extension of SPF and DKIM</li>
-          </ul>
-        </li>
-        <li>You decide what external email servers should do with emails that don't validate through SPF or DKIM
-          <ul>
-            <li>That policy is written into a DMARC TXT record</li>
-            <li>Accept all, send to spam, or reject the email</li>
-            <li>Compliance reports can be sent to the email administrator</li>
-          </ul>
-        </li>
-      </ul>
-      <h2>2.4 - DHCP</h2>
-      <h3>DHCP</h3>
-      <ul>
-        <li>IPv4 address configuration used to be manual
-          <ul>
-            <li>IP address, subnet mask, gateway, DNS servers, NTP servers, etc.</li>
-          </ul>
-        </li>
-        <li>Needed a more automatic method
-          <ul>
-            <li>Scale to thousands of systems</li>
-            <li>Hands-off IP configuration</li>
-          </ul>
-        </li>
-        <li>Dynamic Host Configuration Protocol (DHCP)
-          <ul>
-            <li>Initially released in 1997, updated through the years</li>
-            <li>Provides automatic address / IP configuration</li>
-            <li>Used for almost all devices</li>
-          </ul>
-        </li>
-      </ul>
-      <h3>DHCP leases</h3>
-      <ul>
-        <li>DORA
-          <ul>
-            <li>A four-step process</li>
-          </ul>
-        </li>
-        <li>Discover
-          <ul>
-            <li>Find a DHCP server</li>
-          </ul>
-        </li>
-        <li>Offer
-          <ul>
-            <li>Get an offer</li>
-          </ul>
-        </li>
-        <li>Request
-          <ul>
-            <li>Lock in the offer</li>
-          </ul>
-        </li>
-        <li>Acknowledge
-          <ul>
-            <li>DHCP server confirmation</li>
-          </ul>
-        </li>
-      </ul>
-      <h3>DHCP scopes</h3>
-      <ul>
-        <li>Configured on the DHCP</li>
-        <li>IP address range
-          <ul>
-            <li>And excluded addresses</li>
-          </ul>
-        </li>
-        <li>Subnet mask</li>
-        <li>Lease durations</li>
-        <li>Other scope options
-          <ul>
-            <li>DNS server</li>
-            <li>Default gateway</li>
-            <li>VOIP servers</li>
-          </ul>
-        </li>
-      </ul>
-      <h3>DHCP pools</h3>
-      <ul>
-        <li>Grouping of IP addresses
-          <ul>
-            <li>Each subnet has its own scope</li>
-            <li>192.168.1.0/24</li>
-            <li>192.168.2.0/24</li>
-            <li>192.168.3.0/24</li>
-            <li>...</li>
-          </ul>
-        </li>
-        <li>A scope is generally a single contiguous pool of IP addresses
-          <ul>
-            <li>DHCP exceptions can be made inside of the scope</li>
-          </ul>
-        </li>
-      </ul>
-      <h3>Address reservation</h3>
-      <ul>
-        <li>Address reservation
-          <ul>
-            <li>Administatively configured</li>
-          </ul>
-        </li>
-        <li>Table MAC addresses
-          <ul>
-            <li>Each MAC address has a matching IP address</li>
-          </ul>
-        </li>
-        <li>Other names
-          <ul>
-            <li>Static DHCP Assignment</li>
-            <li>Static DHCP</li>
-            <li>IP Reservation</li>
-          </ul>
-        </li>
-      </ul>
-      <h3>Address Reservation</h3>
-      <h2>2.4 - VLANs and VPNs</h2>
-      <h3>LANs</h3>
-      <ul>
-        <li>Local Area Networks
-          <ul>
-            <li>A group of devices in the same broadcast domain</li>
-          </ul>
-        </li>
-      </ul>
-      <h3>Virtual LANs</h3>
-      <ul>
-        <li>Virtual Local Area Networks
-          <ul>
-            <li>A group of devices in the same broadcast domain</li>
-            <li>Separtated logically instead of physically</li>
-          </ul>
-        </li>
-      </ul>
-      <h3>Configure VLANS</h3>
-      <ul>
-        <li>Virtual Local Area Networks
-          <ul>
-            <li>A group of devices in the same broadcast domain</li>
-          </ul>
-        </li>
-      </ul>
-      <h3>VPNs</h3>
-      <ul>
-        <li>Virual Private Networks
-          <ul>
-            <li>Encrypted (private) data traveling a public network</li>
-          </ul>
-        </li>
-        <li>Concentrator
-          <ul>
-            <li>Encryption/decryption access device</li>
-            <li>Often integrated into a firewall</li>
-          </ul>
-        </li>
-        <li>Many deployment options
-          <ul>
-            <li>Spcialized cryptographic hardware</li>
-            <li>Software based options available</li>
-          </ul>
-        </li>
-        <li>Used with client software
-          <ul>
-            <li>Sometimes built into the OS</li>
-          </ul>
-        </li>
-      </ul>
-    </main>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="a plus certification objective" />
+  <meta property="og:title" content="apluscert.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="url" />
+  <meta property="og:url" content="https://www.apluscert.com" />
+  <title>2.4 DNS Configuration</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <heading>
+    <a href="./index.html">Back Home</a>
+    <a href="./networking-2.html">2.0</a>
+    <h1>2 Networking</h1>
+    <h2>2.4 DNS Configuration</h2>
+  </heading>
+  <main>
+    <h3>Domain Name System</h3>
+    <ul>
+      <li>
+        Translates human-readable names into computer-readable IP addresses
+        <ul>
+          <li>You only need to remember www.professormesser.com</li>
+        </ul>
+      </li>
+      <li>
+        Hierarchical
+        <ul>
+          <li>Follow the path</li>
+        </ul>
+      </li>
+      <li>
+        Distributed database
+        <ul>
+          <li>Many DNS servers</li>
+          <li>13 root server clusters (over 1,000 actual servers)</li>
+          <li>
+            Hundreds of generic top-level domains (gTLDs) - .com, .org, .net,
+            etc.
+          </li>
+          <li>
+            Over 275 country code top-level domains (ccTLDs) - .us, .ca, .uk,
+            etc.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h3>The DNS hierarchy</h3>
+    <h3>DNS records</h3>
+    <ul>
+      <li>
+        Resources Records (RR)
+        <ul>
+          <li>The database records of domain name serives</li>
+        </ul>
+      </li>
+      <li>
+        Over 30 record types
+        <ul>
+          <li>IP addresses, certificates, host alias names, etc.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="important">These are important and critical configurations</span>
+        <ul>
+          <li>Make sure to check your settings, backup, and test!</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>DNS lookup</h3>
+    <h3>Address records (A) (AAAA)</h3>
+    <ul>
+      <li>
+        Defines the IP address of a host
+        <ul>
+          <li>This is the most popular query</li>
+        </ul>
+      </li>
+      <li>
+        A records are for IPv4 addresses
+        <ul>
+          <li>
+            Modify the A record to charge to change the host name to IP
+            address resolution
+          </li>
+        </ul>
+      </li>
+      <li>
+        AAAA records are for IPv6 addresses
+        <ul>
+          <li>The same DNS server, different records</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Canonical name records (CNAME)</h3>
+    <ul>
+      <li>
+        A name is an alias of another, canonical name
+        <ul>
+          <li>One physical server, multiple services</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Mail exchanger record (MX)</h3>
+    <ul>
+      <li>Determines the host name for the mail server - this isn't an IP address; it's a name</li>
+    </ul>
+    <h3>Text records (TXT)</h3>
+    <ul>
+      <li>Human-readable text information
+        <ul>
+          <li>Useful public information</li>
+          <li>Was originally designed for informal information</li>
+        </ul>
+      </li>
+      <li>Can be used for verification purposes
+        <ul>
+          <li>if you have access to the DNS, then you must be the adminstrator of the domain name</li>
+        </ul>
+      </li>
+      <li>Commonly used for email security
+        <ul>
+          <li>External email servers validate information from your DNS</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Viewing TXT records with nslookup</h3>
+    <h3>Domain keys identified Mail (DKIM)</h3>
+    <ul>
+      <li>Digital sign a domain's outgoing mail
+        <ul>
+          <li>Validated by mail servers, not usually seen by the end user</li>
+          <li>The public key is in the DKIM TXT record</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Sender Policy Framework (SPF)</h3>
+    <ul>
+      <li>SPF protocol
+        <ul>
+          <li>A list of all servers authorized to send emails for this domain</li>
+          <li>Prevent mail spoofing</li>
+          <li>Mail servers perform a check to see if incoming mail really did come from an authorized host</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>DMARC</h3>
+    <ul>
+      <li>Domain-based Message Authentication, Reporting, and Conformance (DMARC)
+        <ul>
+          <li>Prevent unauthorized email use (spoofing)</li>
+          <li>An extension of SPF and DKIM</li>
+        </ul>
+      </li>
+      <li>You decide what external email servers should do with emails that don't validate through SPF or DKIM
+        <ul>
+          <li>That policy is written into a DMARC TXT record</li>
+          <li>Accept all, send to spam, or reject the email</li>
+          <li>Compliance reports can be sent to the email administrator</li>
+        </ul>
+      </li>
+    </ul>
+    <h2>2.4 - DHCP</h2>
+    <h3>DHCP</h3>
+    <ul>
+      <li>IPv4 address configuration used to be manual
+        <ul>
+          <li>IP address, subnet mask, gateway, DNS servers, NTP servers, etc.</li>
+        </ul>
+      </li>
+      <li>Needed a more automatic method
+        <ul>
+          <li>Scale to thousands of systems</li>
+          <li>Hands-off IP configuration</li>
+        </ul>
+      </li>
+      <li>Dynamic Host Configuration Protocol (DHCP)
+        <ul>
+          <li>Initially released in 1997, updated through the years</li>
+          <li>Provides automatic address / IP configuration</li>
+          <li>Used for almost all devices</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>DHCP leases</h3>
+    <ul>
+      <li>DORA
+        <ul>
+          <li>A four-step process</li>
+        </ul>
+      </li>
+      <li>Discover
+        <ul>
+          <li>Find a DHCP server</li>
+        </ul>
+      </li>
+      <li>Offer
+        <ul>
+          <li>Get an offer</li>
+        </ul>
+      </li>
+      <li>Request
+        <ul>
+          <li>Lock in the offer</li>
+        </ul>
+      </li>
+      <li>Acknowledge
+        <ul>
+          <li>DHCP server confirmation</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>DHCP scopes</h3>
+    <ul>
+      <li>Configured on the DHCP</li>
+      <li>IP address range
+        <ul>
+          <li>And excluded addresses</li>
+        </ul>
+      </li>
+      <li>Subnet mask</li>
+      <li>Lease durations</li>
+      <li>Other scope options
+        <ul>
+          <li>DNS server</li>
+          <li>Default gateway</li>
+          <li>VOIP servers</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>DHCP pools</h3>
+    <ul>
+      <li>Grouping of IP addresses
+        <ul>
+          <li>Each subnet has its own scope</li>
+          <li>192.168.1.0/24</li>
+          <li>192.168.2.0/24</li>
+          <li>192.168.3.0/24</li>
+          <li>...</li>
+        </ul>
+      </li>
+      <li>A scope is generally a single contiguous pool of IP addresses
+        <ul>
+          <li>DHCP exceptions can be made inside of the scope</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Address reservation</h3>
+    <ul>
+      <li>Address reservation
+        <ul>
+          <li>Administatively configured</li>
+        </ul>
+      </li>
+      <li>Table MAC addresses
+        <ul>
+          <li>Each MAC address has a matching IP address</li>
+        </ul>
+      </li>
+      <li>Other names
+        <ul>
+          <li>Static DHCP Assignment</li>
+          <li>Static DHCP</li>
+          <li>IP Reservation</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Address Reservation</h3>
+    <h2>2.4 - VLANs and VPNs</h2>
+    <h3>LANs</h3>
+    <ul>
+      <li>Local Area Networks
+        <ul>
+          <li>A group of devices in the same broadcast domain</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Virtual LANs</h3>
+    <ul>
+      <li>Virtual Local Area Networks
+        <ul>
+          <li>A group of devices in the same broadcast domain</li>
+          <li>Separtated logically instead of physically</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Configure VLANS</h3>
+    <ul>
+      <li>Virtual Local Area Networks
+        <ul>
+          <li>A group of devices in the same broadcast domain</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>VPNs</h3>
+    <ul>
+      <li>Virual Private Networks
+        <ul>
+          <li>Encrypted (private) data traveling a public network</li>
+        </ul>
+      </li>
+      <li>Concentrator
+        <ul>
+          <li>Encryption/decryption access device</li>
+          <li>Often integrated into a firewall</li>
+        </ul>
+      </li>
+      <li>Many deployment options
+        <ul>
+          <li>Spcialized cryptographic hardware</li>
+          <li>Software based options available</li>
+        </ul>
+      </li>
+      <li>Used with client software
+        <ul>
+          <li>Sometimes built into the OS</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Client-to-Site VPN</h3>
+    <ul>
+      <li>On-demand access from a remote device
+        <ul>
+          <li>Software connects to a VPN concentrator</li>
+        </ul>
+      </li>
+      <li>Some software can be configured as always on</li>
+    </ul>
+    <h3>Site-to-site VPN</h3>
+    <ul>
+      <li>Always-on
+        <ul>
+          <li>Or almost always</li>
+        </ul>
+      </li>
+      <li>Firewalls often act as VPN concentrators
+        <ul>
+          <li>Probably already have firewalls in place</li>
+        </ul>
+      </li>
+    </ul>
+      <h3>Client-to-Site VPN</h3>
+      <h3>Site-to-site VPN</h3>
+  </main>
+</body>
 </html>
