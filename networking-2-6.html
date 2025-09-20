@@ -81,6 +81,18 @@
         </ul>
       </li>
     </ul>
+    <h3>IPv6 addresses</h3>
+    <ul>
+      <li>Internet Protocol v6 - 128-bit address
+        <ul>
+          <li>340,282,366,920,938,463,463,374,607,431,768,211,456 addresses (340 undecillion)</li>
+          <li>6.8 billion people could have 5,000,000,000,000,000,000,000,000,000 addresses each</li>
+        </ul>
+      </li>
+      <li>Your DNS is very impotant!</li>
+      <li>First 64 bits is generally the network prefix (/64)</li>
+      <li>Last 64 bits is then the host network address</li>
+    </ul>
     <h2>2.6 Assigning IP Addresses</h2>
     <h3>Network with IPv4</h3>
     <ul>
@@ -150,6 +162,21 @@
       <li>Better: Configure an IP reservation on the DHCP server
         <ul>
           <li>Associate a specific MAC address with an IP address</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Automatic Private IP Addressing (APIPA)</h3>
+    <ul>
+      <li>A link-local address - No forwarding by routers</li>
+      <li>APIPA uses 169.254.0.0 through 169.254.255.255
+        <ul>
+          <li>First and last 256 addresses are reserved</li>
+          <li>Functional block of 169.254.1.0 through 169.254.254.255</li>
+        </ul>
+      </li>
+      <li>Randomly assigned in this block
+        <ul>
+          <li>Uses ARP to confirm the address isn't currently in use</li>
         </ul>
       </li>
     </ul>
