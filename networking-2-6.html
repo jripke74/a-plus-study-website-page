@@ -9,7 +9,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="url" />
   <meta property="og:url" content="https://www.apluscert.com" />
-  <title>2.6 IPv4 and IPv6</title>
+  <title>2.6 IPv4 and IPv6 and Assigning IP Addresses</title>
   <link rel="stylesheet" href="./styles.css" />
   <link rel="icon" href="./favicon.ico" />
 </head>
@@ -78,6 +78,54 @@
       <li>Defined in RFC 1918
         <ul>
           <li>Reguest for Comment</li>
+        </ul>
+      </li>
+    </ul>
+    <h2>2.6 Assigning IP Addresses</h2>
+    <h3>Network with IPv4</h3>
+    <ul>
+      <li>IP Address, e.g., 192.168.1.165
+        <ul>
+          <li>Every device needs a unique IP address</li>
+        </ul>
+      </li>
+      <li>Subnet mask, e.g., 255.255.255.0
+        <ul>
+          <li>Used by the local device to determine what subnet it's on</li>
+          <li>The subset mask isn't (ussually) transmitted across the network</li>
+          <li>You'll ask for the subnet mask all the time</li>
+          <li>What's the subnet mask of the network?</li>
+        </ul>
+      </li>
+      <li>Default gateway e.g., 192.168.1.1
+        <ul>
+          <li>The router that always you its communicate outside of your local subnet</li>
+          <li>The default gateway must be an IP address on the local subnet</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Static IP addressing</h3>
+    <ul>
+      <li>An IP address that doesn't change
+        <Ul>
+          <li>Without a manual configuration change</li>
+        </Ul>
+      </li>
+      <li>Manually configure the IP address
+        <ul>
+          <li>Type it from the keyboard on each device</li>
+        </ul>
+      </li>
+      <li>Can be difficult to manage
+        <ul>
+          <li>If the address changes, you must visit the device</li>
+          <li>This obvious does not scale</li>
+        </ul>
+      </li>
+      <li>Try to avoid using manual IP addressing
+        <ul>
+          <li>There are better ways to asign addresses</li>
+          <li>DHCP reservation</li>
         </ul>
       </li>
     </ul>
