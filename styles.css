@@ -52,3 +52,11 @@ ul {
 .important {
   color: red;
 }
+
+.advantages-green {
+  color: rgb(34, 191, 34)
+}
+
+.disadvantages-red {
+  color: rgb(255, 0, 0)
+}
